@@ -1,17 +1,18 @@
 # Day 2 — AutoMate AI: Prompting and Python Foundations
 
-Day 2 applies the concepts from the second Agentic AI class to the automotive assistant.
+Day 2 applies the concepts from the 24 November class to the automotive assistant.
 
 ## Topics covered
 
-1. **System messages:** define AutoMate AI's role, project facts, behavioural rules, and response format.
-2. **Few-shot prompting:** provide examples to guide automotive request classification. Examples are prompt context, not model training.
+1. **System messages:** role, facts, rules, and response format.
+2. **Few-shot prompting:** examples guide automotive request classification. This is prompt context, not model training.
 3. **JSON output:** extract a vehicle enquiry into consistent key-value fields and validate it with Python's `json.loads()`.
-4. **Python dictionaries:** use `.get()` to provide a safe fallback for missing keys.
-5. **Type hints and docstrings:** document function inputs, outputs, and purpose.
-6. **Decorators:** add function-call logging without changing the wrapped function's core behaviour.
-7. **Manual conversation memory:** append the latest user/assistant messages and cap history at eight question-and-answer turns.
-8. **Exception handling:** catch input, JSON, and API failures and return useful messages rather than abruptly stopping the chatbot.
+4. **Python dictionaries:** use `.get()` to provide a safe default for a missing key.
+5. **Type hints and docstrings:** document expected function inputs, outputs, and purpose.
+6. **Decorators:** add function-call logging without changing the wrapped function's core logic.
+7. **LangChain `@tool`:** demonstrate converting a Python function into a LangChain tool. This is a tool-definition example, not yet a complete autonomous agent.
+8. **Manual conversation memory:** retain at most eight question-and-answer turns.
+9. **Exception handling:** use `try/except` to handle invalid input, JSON parsing issues, and API failures gracefully.
 
 ## Run in Google Colab
 
@@ -22,7 +23,7 @@ Day 2 applies the concepts from the second Agentic AI class to the automotive as
 
 ## Language
 
-AutoMate AI's system prompt requires English responses. The notebook, explanations, and documentation are in English.
+The AutoMate AI system prompt instructs the model to respond only in English. The notebook and documentation are in English.
 
 ## Limitations
 
