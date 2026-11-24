@@ -1,21 +1,29 @@
 # Agentic AI Learning Challenge
 
-A daily learning repository for building practical LLM applications and AI agents.
+A daily learning repository for practical LLM chatbots and AI agents. Each day's work is kept in its own folder.
 
-## Current project
+## Current project — AutoMate AI 🚗
 
-### Day 1 — AutoMate AI
+**AutoMate AI — Your Journey. Your Intelligent Co-Pilot.**
 
-**AutoMate AI** is a car-buying and automotive information assistant built with Python, LangChain, Groq, and Google Colab.
+An English-language automotive assistant built with Python, LangChain, Groq, and Google Colab. It is the individual project used to apply the concepts from the daily classes.
 
-The assistant responds in English unless the user explicitly requests another language. It can help users:
-- Explore vehicle choices around a stated budget.
-- Compare vehicle models while flagging details that need verification.
-- Understand petrol, diesel, CNG, hybrid, and electric powertrains.
-- Learn about basic maintenance and vehicle safety features.
-- Prepare questions and checks for a used-car inspection.
+### Day 1 — Basic LLM chatbot
 
-> AutoMate AI is an educational prototype, not a live vehicle database. Verify current prices, specifications, safety ratings, recalls, and availability with official sources before making decisions.
+- Connect to a Groq-hosted model using LangChain's `ChatGroq`.
+- Define the assistant's role, domain facts, rules, and response format.
+- Load the API key securely from Colab Secrets.
+- Run a conversational chatbot with a maximum of eight question-and-answer turns in its in-memory history.
+
+### Day 2 — Prompt engineering and Python foundations
+
+- Few-shot prompting for automotive request classification.
+- Structured JSON extraction and Python parsing.
+- Dictionary lookup with safe defaults using `.get()`.
+- Type hints and docstrings.
+- Decorators for function-call logging.
+- Manual conversation memory capped at eight question-and-answer turns.
+- `try/except` error handling for invalid input and API failures.
 
 ## Repository structure
 
@@ -25,22 +33,28 @@ agentic/
 │   ├── AutoMate_AI_Day_01.ipynb
 │   └── README.md
 ├── Day-02/
+│   ├── AutoMate_AI_Day_02.ipynb
+│   └── README.md
 ├── Day-03/
 ├── ...
 └── Day-12/
 ```
 
-## Run Day 1 in Google Colab
+## Run the notebooks
 
-1. Open `Day-01/AutoMate_AI_Day_01.ipynb` in Google Colab.
+1. Open the relevant `.ipynb` file in Google Colab.
 2. Create a Groq API key at <https://console.groq.com/keys>.
-3. In Colab, open **Secrets** (key icon) and add a secret named `GROQ_API_KEY`. Paste the key as its value and enable notebook access.
-4. Run the notebook cells from top to bottom.
-5. Never paste the API key into notebook code or commit it to GitHub.
+3. In Colab, open **Secrets** (key icon), add `GROQ_API_KEY`, paste the key as its value, and enable notebook access.
+4. Run the cells in order.
+5. Never paste API keys into notebook code or commit them to GitHub.
 
-The notebook uses Groq's `openai/gpt-oss-120b` model. Check model availability and limits in the current catalogue: <https://console.groq.com/docs/models>.
+The notebooks currently use `openai/gpt-oss-120b` through LangChain-Groq. Check the current model catalogue at <https://console.groq.com/docs/models> if the model becomes unavailable.
 
-## Tech stack
+## Important limitations
+
+AutoMate AI is a learning prototype, not a live vehicle database. It does not verify current prices, on-road costs, variants, availability, mileage, safety ratings, recalls, or manufacturer specifications. Confirm important details with official sources before making a vehicle decision.
+
+## Technology
 
 - Python
 - LangChain
@@ -50,4 +64,4 @@ The notebook uses Groq's `openai/gpt-oss-120b` model. Check model availability a
 
 ## Security
 
-Never commit API keys, `.env` files, access tokens, or other credentials. Use Colab Secrets for the API key.
+Never commit API keys, `.env` files, access tokens, or other credentials. Use Colab Secrets to supply the API key.
