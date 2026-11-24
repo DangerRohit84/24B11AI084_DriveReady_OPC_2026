@@ -6,7 +6,7 @@ A daily learning repository for practical LLM chatbots and AI agents. Each day's
 
 **AutoMate AI — Your Journey. Your Intelligent Co-Pilot.**
 
-An English-language automotive assistant built with Python, LangChain, Groq, and Google Colab. It is the individual project used to apply the concepts from the daily classes.
+An English-only automotive assistant built with Python, LangChain, Groq, and Google Colab. It is the individual project used to apply the concepts from the daily classes.
 
 ### Day 1 — Basic LLM chatbot
 
@@ -17,13 +17,25 @@ An English-language automotive assistant built with Python, LangChain, Groq, and
 
 ### Day 2 — Prompt engineering and Python foundations
 
+- System messages: role, facts, rules, and response format.
 - Few-shot prompting for automotive request classification.
 - Structured JSON extraction and Python parsing.
 - Dictionary lookup with safe defaults using `.get()`.
 - Type hints and docstrings.
-- Decorators for function-call logging.
+- Decorators for function-call logging and a LangChain `@tool` definition example.
 - Manual conversation memory capped at eight question-and-answer turns.
 - `try/except` error handling for invalid input and API failures.
+
+## Submission task
+
+The class recording on **24 November 2026** instructed students to post both Day 1 and Day 2 code to their GitHub repository by **25 November 2026, 11:00 AM IST**. The GitHub profile is to be submitted once through the mentor's Google Form.
+
+Before submitting:
+- Run both notebooks in Google Colab.
+- Add `GROQ_API_KEY` using Colab Secrets; never hard-code or commit the key.
+- Test the chatbot, few-shot classification, JSON parsing, memory limit, reset, and exit flow.
+- Confirm both notebooks are present in `Day-01` and `Day-02`.
+- Submit your GitHub profile through the mentor's Google Form.
 
 ## Repository structure
 
