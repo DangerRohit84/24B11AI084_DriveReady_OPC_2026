@@ -1,5 +1,4 @@
 question,expected_groups
-question,expected_groups
 "Hi, my name is Ravi. What can you help me with?","automotive|car|vehicle;AutoMate|assistant|help"
 "What name did I tell you in my previous message?","Ravi"
 "Can you tell me the current on-road price of the latest Tata Nexon in my city?","cannot|do not|don't|no access;live|current|real-time;verify|official|dealer"
