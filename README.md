@@ -1,17 +1,17 @@
 # Agentic AI Learning Challenge
 
-A daily learning repository for practical LLM chatbots and AI agents. Each day's work is kept in its own folder.
+A daily learning repository for building practical LLM chatbots and AI agents. Each day's work is kept in its own folder.
 
-## Current project — AutoMate AI 🚗
+## Individual project — AutoMate AI 🚗
 
 **AutoMate AI — Your Journey. Your Intelligent Co-Pilot.**
 
-An English-only automotive assistant built with Python, LangChain, Groq, and Google Colab. It is the individual project used to apply the concepts from the daily classes.
+An English-only automotive assistant built with Python, LangChain, and Google Colab. This individual project applies the concepts introduced in the Agentic AI classes.
 
 ### Day 1 — Basic LLM chatbot
 
 - Connect to a Groq-hosted model using LangChain's `ChatGroq`.
-- Define the assistant's role, domain facts, rules, and response format.
+- Define the assistant's role, facts, rules, and response format.
 - Load the API key securely from Colab Secrets.
 - Run a conversational chatbot with a maximum of eight question-and-answer turns in its in-memory history.
 
@@ -26,16 +26,26 @@ An English-only automotive assistant built with Python, LangChain, Groq, and Goo
 - Manual conversation memory capped at eight question-and-answer turns.
 - `try/except` error handling for invalid input and API failures.
 
-## Submission task
+### Day 3 — First basic LangChain agent
 
-The class recording on **24 November 2026** instructed students to post both Day 1 and Day 2 code to their GitHub repository by **25 November 2026, 11:00 AM IST**. The GitHub profile is to be submitted once through the mentor's Google Form.
+- Create a basic agent using LangChain's `create_agent`.
+- Switch between Google Gemini and OpenAI models.
+- Understand the four agent components: brain, instructions, tools, and memory.
+- Understand the ReAct loop: reason, act, observe, and repeat.
+- Test the agent with ten questions from `Day-03/test.csv`.
+- Inspect failed answers, improve instructions, and rerun all tests.
 
-Before submitting:
-- Run both notebooks in Google Colab.
-- Add `GROQ_API_KEY` using Colab Secrets; never hard-code or commit the key.
-- Test the chatbot, few-shot classification, JSON parsing, memory limit, reset, and exit flow.
-- Confirm both notebooks are present in `Day-01` and `Day-02`.
-- Submit your GitHub profile through the mentor's Google Form.
+**Day 3 scope:** this first agent has no external tools connected yet. Google Sheets and Telegram tool integrations are for the following class.
+
+## Current class follow-ups
+
+The 25 November class asked students to:
+- Upload Days 1, 2, and 3 into this same GitHub repository.
+- Submit the repository link through the mentor's Google Form (the profile/repository form is submitted once).
+- Register for the Google Gemini for Bharat hackathon and complete the separate college verification form shared by the mentors.
+- Run the Day 3 agent using an OpenAI or Google Gemini API key.
+- Test at least ten cases, inspect failures, improve the instructions, and test again.
+- Identify an individual real-world problem to develop further in the next phase.
 
 ## Repository structure
 
@@ -48,6 +58,10 @@ agentic/
 │   ├── AutoMate_AI_Day_02.ipynb
 │   └── README.md
 ├── Day-03/
+│   ├── AutoMate_AI_Day_03.ipynb
+│   ├── README.md
+│   └── test.csv
+├── Day-04/
 ├── ...
 └── Day-12/
 ```
@@ -55,25 +69,19 @@ agentic/
 ## Run the notebooks
 
 1. Open the relevant `.ipynb` file in Google Colab.
-2. Create a Groq API key at <https://console.groq.com/keys>.
-3. In Colab, open **Secrets** (key icon), add `GROQ_API_KEY`, paste the key as its value, and enable notebook access.
-4. Run the cells in order.
-5. Never paste API keys into notebook code or commit them to GitHub.
+2. Add the required provider API key in Colab Secrets and enable notebook access:
+   - Day 1 and Day 2: `GROQ_API_KEY`
+   - Day 3 with Gemini: `GOOGLE_API_KEY`
+   - Day 3 with OpenAI: `OPENAI_API_KEY`
+3. Run the notebook cells in order.
+4. Never paste API keys into notebook code or commit them to GitHub.
 
-The notebooks currently use `openai/gpt-oss-120b` through LangChain-Groq. Check the current model catalogue at <https://console.groq.com/docs/models> if the model becomes unavailable.
+Day 1 and Day 2 currently use Groq's `openai/gpt-oss-120b` model. Day 3 defaults to `gemini-3.8-flash` and also offers `gpt-6.2-sol`. Model access, pricing, free-tier eligibility, rate limits, and availability depend on each provider account and can change; check the current provider catalogue before running.
 
 ## Important limitations
 
-AutoMate AI is a learning prototype, not a live vehicle database. It does not verify current prices, on-road costs, variants, availability, mileage, safety ratings, recalls, or manufacturer specifications. Confirm important details with official sources before making a vehicle decision.
-
-## Technology
-
-- Python
-- LangChain
-- `langchain-groq`
-- Groq API
-- Google Colab
+AutoMate AI is a learning prototype, not a live vehicle database. It does not verify current prices, on-road costs, variants, availability, mileage, safety ratings, recalls, or manufacturer specifications. Confirm important vehicle details with official sources before making a purchase decision.
 
 ## Security
 
-Never commit API keys, `.env` files, access tokens, or other credentials. Use Colab Secrets to supply the API key.
+Never commit API keys, `.env` files, access tokens, or other credentials. Use Google Colab Secrets to supply API keys.
