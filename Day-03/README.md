@@ -22,7 +22,7 @@ The notebook defaults to Google Gemini. You can switch `MODEL_PROVIDER` to `"ope
 
 Save the selected key in Google Colab Secrets as `GOOGLE_API_KEY` or `OPENAI_API_KEY`. Enable notebook access. Never write a key directly in the notebook or commit it to GitHub.
 
-The default Gemini model configured in the notebook is `gemini-3.8-flash`; the OpenAI option is `gpt-6-luna`. Model names, access, pricing, and quotas can change. Confirm the current provider catalogue before running.
+The default Gemini model configured in the notebook is `gemini-3.8-flash`; the OpenAI option is `gpt-6.2-sol`. Model names, access, pricing, and quotas can change. Confirm the current provider catalogue before running.
 
 ## Run the notebook
 
