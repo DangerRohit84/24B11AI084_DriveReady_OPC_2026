@@ -10,12 +10,16 @@ An English-only automotive assistant built with Python, LangChain, and Google Co
 
 ### Day 1 — Basic LLM chatbot
 
+Required OPC source: `Day-01/task.py` (the `.ipynb` file is an optional Colab notebook).
+
 - Connect to a Groq-hosted model using LangChain's `ChatGroq`.
 - Define the assistant's role, facts, rules, and response format.
 - Load the API key securely from Colab Secrets.
 - Run a conversational chatbot with a maximum of eight question-and-answer turns in its in-memory history.
 
 ### Day 2 — Prompt engineering and Python foundations
+
+Required OPC source: `Day-02/task.py` (the `.ipynb` file is an optional Colab notebook).
 
 - System messages: role, facts, rules, and response format.
 - Few-shot prompting for automotive request classification.
@@ -27,6 +31,8 @@ An English-only automotive assistant built with Python, LangChain, and Google Co
 - `try/except` error handling for invalid input and API failures.
 
 ### Day 3 — First basic LangChain agent
+
+Required OPC source: `Day-03/task.py`; test data: `Day-03/test.csv` (the `.ipynb` file is an optional Colab notebook).
 
 - Create a basic agent using LangChain's `create_agent`.
 - Switch between Google Gemini and OpenAI models.
@@ -52,12 +58,15 @@ The 25 November class asked students to:
 ```text
 agentic/
 ├── Day-01/
+│   ├── task.py
 │   ├── AutoMate_AI_Day_01.ipynb
 │   └── README.md
 ├── Day-02/
+│   ├── task.py
 │   ├── AutoMate_AI_Day_02.ipynb
 │   └── README.md
 ├── Day-03/
+│   ├── task.py
 │   ├── AutoMate_AI_Day_03.ipynb
 │   ├── README.md
 │   └── test.csv
@@ -66,7 +75,11 @@ agentic/
 └── Day-12/
 ```
 
-## Run the notebooks
+## OPC submission format
+
+Each completed day has a `task.py` source file and a `README.md` describing its implementation. The Colab notebooks are included as optional interactive companions.
+
+## Run the notebooks and source files
 
 1. Open the relevant `.ipynb` file in Google Colab.
 2. Add the required provider API key in Colab Secrets and enable notebook access:
