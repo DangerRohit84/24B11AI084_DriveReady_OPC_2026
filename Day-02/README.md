@@ -32,3 +32,8 @@ The chatbot does not access live vehicle listings, prices, specifications, recal
 ## Stack
 
 Python · LangChain · LangChain-Groq · Groq API · Google Colab
+
+
+## OPC submission file
+
+The required Python source file for this task is `task.py`. The Colab notebook is retained as an optional interactive version. Run this task in Google Colab after installing `langchain` and `langchain-groq`, and add `GROQ_API_KEY` in Colab Secrets. The script uses the Colab `userdata` API.
