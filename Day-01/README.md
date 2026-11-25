@@ -2,7 +2,7 @@
 
 **Your Journey. Your Intelligent Co-Pilot.**
 
-AutoMate AI is a conversational automotive assistant created as the first project in the Agentic AI Learning Challenge. It uses LangChain to connect a structured car-advisor prompt to a Groq-hosted language model. The assistant responds in English unless the user explicitly requests another language.
+Day 1 is the foundational chatbot exercise for AutoMate AI. It uses LangChain to connect a structured automotive-advisor prompt to a Groq-hosted language model and practices secure API-key handling and conversation history. This is a learning exercise, not the final dealership product. The product direction is an AI sales and operations co-pilot for independent used-car dealerships.
 
 ## What it can help with
 
