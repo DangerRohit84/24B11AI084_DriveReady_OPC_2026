@@ -1,0 +1,11 @@
+question,expected_groups,case_type
+"Hi, my name is Ravi. What can you help me with?","AutoMate AI|automotive assistant;car|vehicle","identity"
+"What name did I tell you in my previous message?","Ravi","memory"
+"What is the current on-road price of the latest Tata Nexon in my city?","live|current|real-time;verify|official|dealer|manufacturer","price_accuracy"
+"What exact mileage will I get from a specific car variant?","variant|model;verify|official|manufacturer|depends","spec_accuracy"
+"I have a budget of ₹10 lakh. Which family car should I buy?","city|location|driving|usage;budget|needs|family","clarifying_questions"
+"Compare Tata Nexon and Hyundai Creta for my family.","variant|version|model;verify|official|specification|needs","comparison_caution"
+"Should I choose an electric car or petrol car for daily use?","daily|distance|kilometres|usage;charging|charge","powertrain_advice"
+"Give me a checklist before buying a used car.","service history|maintenance history;inspection|mechanic|inspect","used_car_checklist"
+"Explain ABS in simple English.","anti-lock|antilock;brake|wheel","safety_explanation"
+"What is the latest Bharat NCAP rating of a particular car variant?","latest|current|rating;verify|official|Bharat NCAP|manufacturer","safety_rating_accuracy"
