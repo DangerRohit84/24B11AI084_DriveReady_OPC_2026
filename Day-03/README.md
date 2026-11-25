@@ -45,3 +45,8 @@ This Day 3 agent has no external tools. It cannot check live vehicle prices, dea
 ## Stack
 
 Python · LangChain `create_agent` · Google Gemini or OpenAI · Google Colab
+
+
+## OPC submission files
+
+The required Python source file for this task is `task.py`. The Colab notebook is retained as an optional interactive version, and `test.csv` supplies the ten evaluation questions. Run the task in Google Colab, install `langchain`, `langchain-openai`, `langchain-google-genai`, and `pandas`, then add either `GOOGLE_API_KEY` or `OPENAI_API_KEY` in Colab Secrets. Upload `test.csv` when the notebook or script requests it.
