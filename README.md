@@ -1,100 +1,122 @@
-# Agentic AI Learning Challenge
+# AutoMate AI 🚗
 
-A daily learning repository for building practical LLM chatbots and AI agents. Each day's work is kept in its own folder.
+**The AI Sales & Operations Co-Pilot for Independent Used-Car Dealerships**
 
-## Individual project — AutoMate AI 🚗
+AutoMate AI is an early-stage product concept for helping small automotive dealerships organise customer enquiries, match buyer requirements to their own inventory, prepare staff-approved replies, and manage follow-ups.
 
-**AutoMate AI — Your Journey. Your Intelligent Co-Pilot.**
+This repository is also the Drive Ready OPC 2026 daily learning submission. Each day contains the required `task.py` and `README.md`; Colab notebooks are retained as optional interactive companions.
 
-An English-only automotive assistant built with Python, LangChain, and Google Colab. This individual project applies the concepts introduced in the Agentic AI classes.
+## The problem we want to solve
 
-### Day 1 — Basic LLM chatbot
+Independent used-car dealerships may manage enquiries, vehicle stock, and customer follow-ups across spreadsheets, calls, messaging apps, and manual notes. AutoMate AI aims to bring these repeated workflows into one assistant while keeping dealership staff in control.
 
-Required OPC source: `Day-01/task.py` (the `.ipynb` file is an optional Colab notebook).
+This is a product hypothesis, not a claim that every dealership has the same problem. We will validate it through dealer interviews and a small pilot.
 
-- Connect to a Groq-hosted model using LangChain's `ChatGroq`.
-- Define the assistant's role, facts, rules, and response format.
-- Load the API key securely from Colab Secrets.
-- Run a conversational chatbot with a maximum of eight question-and-answer turns in its in-memory history.
+## Initial target customer
+
+Independent used-car dealerships and small pre-owned vehicle businesses in India.
+
+## Initial MVP
+
+The first end-to-end workflow is:
+
+**Customer enquiry → qualification → inventory match → staff-approved reply → lead record → follow-up reminder.**
+
+Planned MVP capabilities:
+- Extract buyer requirements such as budget, preferred vehicle type, fuel, transmission, location, and purchase timeline.
+- Ask clarifying questions when important information is missing.
+- Search a dealership's approved inventory sheet or database.
+- Show vehicle matches with source record and last-updated time.
+- Draft customer replies for staff approval.
+- Log leads and next follow-up dates.
+- Summarise pending enquiries for dealership staff.
+
+## What AutoMate AI does not do yet
+
+The current Day 1–3 notebooks are learning prototypes. They are not connected to a live dealership, stock feed, WhatsApp, Telegram, or Google Sheets tool. They cannot verify real availability, prices, ownership, accident history, vehicle condition, or legal status. They do not book, reserve, negotiate, or sell vehicles.
+
+Never treat a model-generated answer as verified inventory data. A future connected version must rely on authorised, current records and show their freshness. Customer-facing messages and consequential changes should require staff approval in the initial MVP.
+
+## Daily learning and implementation
+
+### Day 1 — LLM chatbot foundation
+
+Required source: `Day-01/task.py`  
+Optional Colab notebook: `Day-01/AutoMate_AI_Day_01.ipynb`
+
+Practice LangChain model calls, system instructions, secure API-key use, and conversational memory.
 
 ### Day 2 — Prompt engineering and Python foundations
 
-Required OPC source: `Day-02/task.py` (the `.ipynb` file is an optional Colab notebook).
+Required source: `Day-02/task.py`  
+Optional Colab notebook: `Day-02/AutoMate_AI_Day_02.ipynb`
 
-- System messages: role, facts, rules, and response format.
-- Few-shot prompting for automotive request classification.
-- Structured JSON extraction and Python parsing.
-- Dictionary lookup with safe defaults using `.get()`.
-- Type hints and docstrings.
-- Decorators for function-call logging and a LangChain `@tool` definition example.
-- Manual conversation memory capped at eight question-and-answer turns.
-- `try/except` error handling for invalid input and API failures.
+Practice role/facts/rules/format, few-shot prompting, JSON, dictionaries, type hints, decorators, memory, and error handling.
 
 ### Day 3 — First basic LangChain agent
 
-Required OPC source: `Day-03/task.py`; test data: `Day-03/test.csv` (the `.ipynb` file is an optional Colab notebook).
+Required source: `Day-03/task.py`  
+Test data: `Day-03/test.csv`  
+Optional Colab notebook: `Day-03/AutoMate_AI_Day_03.ipynb`
 
-- Create a basic agent using LangChain's `create_agent`.
-- Switch between Google Gemini and OpenAI models.
-- Understand the four agent components: brain, instructions, tools, and memory.
-- Understand the ReAct loop: reason, act, observe, and repeat.
-- Test the agent with ten questions from `Day-03/test.csv`.
-- Inspect failed answers, improve instructions, and rerun all tests.
+Create the first basic agent, understand brain/instructions/tools/memory and the ReAct loop, and test ten dealership-assistant scenarios. This first agent has no external tools yet.
 
-**Day 3 scope:** this first agent has no external tools connected yet. Google Sheets and Telegram tool integrations are for the following class.
+## Product documentation
 
-## Current class follow-ups
-
-The 25 November class asked students to:
-- Upload Days 1, 2, and 3 into this same GitHub repository.
-- Submit the repository link through the mentor's Google Form (the profile/repository form is submitted once).
-- Register for the Google Gemini for Bharat hackathon and complete the separate college verification form shared by the mentors.
-- Run the Day 3 agent using an OpenAI or Google Gemini API key.
-- Test at least ten cases, inspect failures, improve the instructions, and test again.
-- Identify an individual real-world problem to develop further in the next phase.
+- [Product vision](docs/PRODUCT_VISION.md)
+- [Business model](docs/BUSINESS_MODEL.md)
+- [System architecture](docs/SYSTEM_ARCHITECTURE.md)
+- [Development roadmap](docs/DEVELOPMENT_ROADMAP.md)
 
 ## Repository structure
 
 ```text
-agentic/
+24B11AI084_DriveReady_OPC_2026/
 ├── Day-01/
 │   ├── task.py
-│   ├── AutoMate_AI_Day_01.ipynb
-│   └── README.md
+│   ├── README.md
+│   └── AutoMate_AI_Day_01.ipynb
 ├── Day-02/
 │   ├── task.py
-│   ├── AutoMate_AI_Day_02.ipynb
-│   └── README.md
+│   ├── README.md
+│   └── AutoMate_AI_Day_02.ipynb
 ├── Day-03/
 │   ├── task.py
-│   ├── AutoMate_AI_Day_03.ipynb
 │   ├── README.md
-│   └── test.csv
-├── Day-04/
-├── ...
-└── Day-12/
+│   ├── test.csv
+│   └── AutoMate_AI_Day_03.ipynb
+├── docs/
+│   ├── PRODUCT_VISION.md
+│   ├── BUSINESS_MODEL.md
+│   ├── SYSTEM_ARCHITECTURE.md
+│   └── DEVELOPMENT_ROADMAP.md
+└── requirements.txt
 ```
 
-## OPC submission format
+## Run the learning tasks
 
-Each completed day has a `task.py` source file and a `README.md` describing its implementation. The Colab notebooks are included as optional interactive companions.
+Run the notebooks in Google Colab or use the `task.py` source files in a compatible environment. The current exercises use:
+- Day 1 and Day 2: Groq API via LangChain-Groq; Colab Secret `GROQ_API_KEY`.
+- Day 3: Google Gemini or OpenAI; Colab Secret `GOOGLE_API_KEY` or `OPENAI_API_KEY`.
 
-## Run the notebooks and source files
+Install the packages listed in `requirements.txt` and any day-specific dependencies. Model identifiers and provider availability can change; check your provider's current model catalogue before running.
 
-1. Open the relevant `.ipynb` file in Google Colab.
-2. Add the required provider API key in Colab Secrets and enable notebook access:
-   - Day 1 and Day 2: `GROQ_API_KEY`
-   - Day 3 with Gemini: `GOOGLE_API_KEY`
-   - Day 3 with OpenAI: `OPENAI_API_KEY`
-3. Run the notebook cells in order.
-4. Never paste API keys into notebook code or commit them to GitHub.
+## Product principles
 
-Day 1 and Day 2 currently use Groq's `openai/gpt-oss-120b` model. Day 3 defaults to `gemini-3.8-flash` and also offers `gpt-6.2-sol`. Model access, pricing, free-tier eligibility, rate limits, and availability depend on each provider account and can change; check the current provider catalogue before running.
+1. **Truth over fluency:** never invent vehicle stock, prices, mileage, or condition.
+2. **Human approval:** staff approve customer-facing messages and consequential changes.
+3. **Traceability:** show the source record and freshness of inventory information.
+4. **Least privilege:** connect only to the systems and data required.
+5. **Privacy by design:** collect only necessary customer data and define access and retention.
+6. **Cost-aware AI:** use ordinary code for calculations, filtering, validation, and scheduled work; use LLMs for language understanding and drafting.
+7. **Validate before scaling:** interview dealers and measure a pilot before expanding features.
 
-## Important limitations
+## Current status
 
-AutoMate AI is a learning prototype, not a live vehicle database. It does not verify current prices, on-road costs, variants, availability, mileage, safety ratings, recalls, or manufacturer specifications. Confirm important vehicle details with official sources before making a purchase decision.
+**Stage:** Learning prototypes and product discovery.  
+**Live dealership integrations:** None yet.  
+**Commercial launch:** Not started.
 
 ## Security
 
-Never commit API keys, `.env` files, access tokens, or other credentials. Use Google Colab Secrets to supply API keys.
+Never commit API keys, `.env` files, access tokens, customer personal data, or dealership credentials. Use Colab Secrets or a proper secret manager.
