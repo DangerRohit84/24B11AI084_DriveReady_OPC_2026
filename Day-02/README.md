@@ -1,6 +1,6 @@
 # Day 2 — AutoMate AI: Prompting and Python Foundations
 
-Day 2 applies the concepts from the 24 November class to the automotive assistant.
+Day 2 applies the concepts from the 24 November class to the automotive assistant. These are foundational prompt-engineering and Python exercises; the product's initial customer segment is independent used-car dealerships.
 
 ## Topics covered
 
