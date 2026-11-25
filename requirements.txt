@@ -1,2 +1,8 @@
+# Shared dependencies for the learning notebooks and source tasks.
+# Run in Google Colab or a compatible Python environment.
+
 langchain>=1.0.0
 langchain-groq>=1.0.0
+langchain-openai>=1.0.0
+langchain-google-genai>=2.0.0
+pandas>=2.0.0
