@@ -61,6 +61,20 @@ Optional Colab notebook: `Day-03/AutoMate_AI_Day_03.ipynb`
 
 Create the first basic agent, understand brain/instructions/tools/memory and the ReAct loop, and test ten dealership-assistant scenarios. This first agent has no external tools yet.
 
+### Day 4 — Dealership agent with tools and Google Sheets
+
+Required source: `Day-04/task.py`  
+Test prompts: `Day-04/test.csv`  
+Implementation guide: `Day-04/README.md`
+
+- Connect a LangChain agent to a dealership-owned Google Sheets workbook.
+- Search available vehicle inventory using `search_inventory`.
+- Calculate estimated vehicle-loan EMI with deterministic Python using `calculate_vehicle_emi`.
+- Validate customer enquiries with Pydantic and save consented leads using `save_qualified_lead`.
+- Handle API rate limits and connection failures.
+
+**Day 4 scope:** Google Sheets inventory lookup and lead logging are included. Customer messaging, vehicle booking, payment, live market data, and vehicle-condition verification are not connected.
+
 ## Product documentation
 
 - [Product vision](docs/PRODUCT_VISION.md)
