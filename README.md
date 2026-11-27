@@ -75,6 +75,20 @@ Implementation guide: `Day-04/README.md`
 
 **Day 4 scope:** Google Sheets inventory lookup and lead logging are included. Customer messaging, vehicle booking, payment, live market data, and vehicle-condition verification are not connected.
 
+### Day 5 — Thread memory and dealership-document RAG
+
+Required source: `Day-05/task.py`  
+Test prompts: `Day-05/test.csv`  
+Implementation guide: `Day-05/README.md`
+
+- Separate conversation histories using LangGraph thread IDs and an in-memory checkpointer.
+- Upload authorised dealership PDFs, split them into overlapping chunks, and embed them.
+- Store and retrieve vectors with Chroma.
+- Use RAG to answer from the uploaded documents, cite source pages, and decline unsupported questions.
+- Test cross-thread isolation and document-grounded answers.
+
+**Day 5 scope:** the exercise uses `InMemorySaver` and a local Chroma directory for Colab learning. It is not production persistence or a long-term customer-profile store. Upload only non-sensitive business documents you are authorised to use.
+
 ## Product documentation
 
 - [Product vision](docs/PRODUCT_VISION.md)
