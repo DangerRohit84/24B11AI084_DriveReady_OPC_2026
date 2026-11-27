@@ -2,13 +2,15 @@
 
 This roadmap is a proposed product plan. It is separate from the mentor's daily curriculum and may be adjusted as the classes progress.
 
-## Phase 0 — Learning foundation (Days 1–3)
+## Phase 0 — Learning foundation (Days 1–5)
 
 - [x] Day 1: basic LLM chatbot with LangChain and Groq.
 - [x] Day 2: prompting, JSON, manual memory, Python functions, decorators, and exception handling.
 - [x] Day 3: first basic LangChain agent and ten-case evaluation file.
+- [x] Day 4: tools, function calling, Google Sheets inventory/lead actions, Pydantic validation, and EMI calculation.
+- [x] Day 5: thread-specific conversation memory, embeddings, Chroma vector search, PDF ingestion, and RAG.
 - [ ] Execute all notebooks and source files in Colab with working API credentials.
-- [ ] Review and record actual Day 3 test outcomes.
+- [ ] Review and record actual Day 3–5 test outcomes.
 
 ## Phase 1 — Discovery and workflow definition
 
