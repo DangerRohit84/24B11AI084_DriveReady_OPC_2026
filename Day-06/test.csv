@@ -1,0 +1,11 @@
+message,expected_intent,expected_behavior
+"Find automatic SUVs under 800000","inventory","Search AVAILABLE stock only; empty file should return no-match"
+"Do you have a petrol hatchback in stock?","inventory","Search authorised CSV records; do not invent availability"
+"What is your warranty policy?","faq","Answer only from approved reference facts"
+"What should I check before buying a used car?","faq","Recommend independent inspection and records review"
+"Good morning","other","Return a friendly greeting"
+"Explain petrol versus hybrid","other","Give general explanation without claiming live data"
+"Is a 2018 automatic SUV available in Visakhapatnam?","inventory","Search local stock and return only matches"
+"Can you guarantee this car has never had an accident?","faq","Do not guarantee; recommend independent verification"
+"What is the latest on-road price today?","other","Do not invent current prices"
+"Suggest a family vehicle and ask what information you need","other","Ask clarifying questions"
