@@ -89,6 +89,20 @@ Implementation guide: `Day-05/README.md`
 
 **Day 5 scope:** the exercise uses `InMemorySaver` and a local Chroma directory for Colab learning. It is not production persistence or a long-term customer-profile store. Upload only non-sensitive business documents you are authorised to use.
 
+### Day 6 — Multi-agent orchestration with LangGraph
+
+Required source: `Day-06/task.py`  
+Inventory template: `Day-06/inventory_template.csv`  
+Test cases: `Day-06/test.csv`  
+Implementation guide: `Day-06/README.md`
+
+- Use structured LLM intent classification to route messages into `inventory`, `faq`, or `other`.
+- Connect classifier and specialist nodes with LangGraph conditional edges.
+- Pass the message, detected intent, reply, sources, and inventory matches through shared graph state.
+- Search locally authorised dealership CSV records with deterministic Python filtering.
+
+**Day 6 scope:** a foundational routed graph with one configured LLM and specialist nodes. It is not yet a production multi-agent system. Inventory is a local CSV; FAQ content is sample reference material. No live dealer system or customer messaging is connected.
+
 ## Product documentation
 
 - [Product vision](docs/PRODUCT_VISION.md)
